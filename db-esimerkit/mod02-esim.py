@@ -48,3 +48,9 @@ height = height + 0.1
 print(f"Nimi: {name}, Ikä: {age}, Pituus: {height} metriä")
 
 print(math.pi)
+
+# t. 6 maybe , satunnaisen kokonaisluvun arpominen 1-6 (not tehtävä, but eximerkki)
+random_number = random.randint(1, 6)
+# OTHER TEHTÄVÄ print(f"Satunnainen luku 1-6: {random_number}")
+print(f"Satunnainen luku 1-6: {random_number}")
+

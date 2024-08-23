@@ -1,0 +1,5 @@
+# kysytään nimeä
+käyttäjä = input('Anna nimesi: ')
+print("Terve " + käyttäjä + "!")
+
+
