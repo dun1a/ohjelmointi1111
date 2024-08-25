@@ -11,4 +11,4 @@ print(area)
 # tai
 
 print(f"Ympyrän säde on {r}, pinta-ala on {area} neliömetreinä")
-print(f"Ympyrän säde on {r}, pinta-ala on {area:.1f} neliömetreinä") # area:.1f pyöristi numeron yhden tarkkuudelle -> 28.3
+print(f"Ympyrän säde on {r}, pinta-ala on {area:.1f} neliömetreinä") # area:.1f pyöristi vastauksen -> 28.3
