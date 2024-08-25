@@ -1,4 +1,4 @@
-# kysytään suorakulmion kannan ja korkeuden
+# kysytään suorakulmion kannan ja korkeuden ja lasketaan piirin ja pinta-alan 
 import math
 
 # suorakulmion sivujen pituudet: 5, 8
