@@ -3,7 +3,7 @@ import random
 number = random.randint (0,9)
 print(number)
 
-# tai (en ymmärtänyt tehtävänantoa)
+# tai (??)
 
 numList = random.sample(range(0,9), 3)
 print(numList)
