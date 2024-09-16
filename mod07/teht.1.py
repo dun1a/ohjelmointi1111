@@ -20,30 +20,3 @@ print(f'{kuukaudet[kuukausi_num-1]} on {kausi}')
 
 
 
-
-'''
-if kuukausi_num in (12, 1, 2):
-    vuodenaika = 'kuukausi kuuluu vuodenaikaan Talvi'
-    print(vuodenaika)
-elif kuukausi_num in (3, 4, 5):
-    vuodenaika = 'kuukausi kuuluu vuodenaikaan Kevat'
-    print(vuodenaika)
-elif kuukausi_num in (6, 7, 8):
-    vuodenaika = 'kuukausi kuuluu vuodenaikaan Kesa'
-    print(vuodenaika)
-elif kuukausi_num in (9, 10, 11):
-    vuodenaika = 'kuukausi kuuluu vuodanaikaan Syksy'
-    print(vuodenaika)
-'''
-
-
-
-
-
-
-
-
-
-
-
-
