@@ -29,17 +29,4 @@ if airport: # vastaa: airport != None
 else:
     print('Lentokenttä ei löydy annetulla koodilla.')
 
-'''
-print('\nEXTRA\n') #tiedon lisäys
-
-def add_airport(icao, name, municipality): #municipality = paikkakunta
-    sgl = (f"INSERT INTO airport (id, ident) VALUES (999, '{icao}', '{name}', '{municipality}')")
-    cursor = connection.cursor()
-    cursor.execute(sgl)
-
-icao = input('Anna uusi ICAO: ')
-name = input('Anna uusi kentän nimi: ')
-municipality = input('Ja paikkakunta: ')
-add_airport(icao, name, municipality)
-'''
 
