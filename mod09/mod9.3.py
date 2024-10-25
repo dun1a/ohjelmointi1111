@@ -1,28 +1,14 @@
 # Laajenna ohjelmaa siten, että mukana on kulje-metodi, joka saa parametrinaan tuntimäärän. Metodi kasvattaa kuljettua matkaa sen verran kuin auto on tasaisella vauhdilla annetussa tuntimäärässä edennyt.
 # Esimerkki: auto-olion tämänhetkinen kuljettu matka on 2000 km. Nopeus on 60 km/h. Metodikutsu auto.kulje(1.5) kasvattaa kuljetun matkan lukemaan 2090 km.
 
-class Kuljettaja:
-    def __init__(self, nimi, ika):
-        self.nimi = nimi
-        self.ika = ika
 
-    def kulje(self, tunnit):
-        print(f'Olen {self.nimi}, {self.ika}.')
-        self.auto.kiihdyta(30)
-        print(self.auto.nopeus)
-        self.auto.kulje(1.5)
-        self.auto.kiihdyta(70)
-        print(self.auto.nopeus)
-        self.auto.kulje(1.5)
-        self.auto.kiihdyta(-200)
-        print(self.auto.nopeus)
-        self.auto.kulje(1.5)
+
 
 class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus, nopeus, kuljettu_matka=0):
+    def __init__(self, rekisteritunnus, huippunopeus, nopeus=0, kuljettu_matka=0):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
-        self.nopeus = 0
+        self.nopeus = nopeus
         self.kuljettu_matka = kuljettu_matka
 
     def aunton_ominaisuudet(self):
@@ -37,28 +23,16 @@ class Auto:
         elif self.nopeus > self.huippunopeus:
             self.nopeus = self.huippunopeus
 
+    def kulje(self, tuntimaara):
+        matka = self.nopeus * tuntimaara
+        self.kuljettu_matka += matka
 
-a1 = Auto("ABC-123",142, 60)
-k = Kuljettaja("Mikko", 40)
 
-k.auto()
-'''
-a.kiihdyta(30)
-a.aunton_ominaisuudet()
+auto= Auto("ABC-123",142)
 
-a.kiihdyta(70)
-a.aunton_ominaisuudet()
+auto.nopeus = 60
+auto.kuljettu_matka = 2000
+auto.kulje(1.5)
+auto.aunton_ominaisuudet()
 
-a.kiihdyta(50)
-a.aunton_ominaisuudet()
 
-a.kiihdyta(-200)
-a.aunton_ominaisuudet()
-'''
-'''
-a.nopeus = 60
-a.kulje(60)
-a.kuljettu_matka = 2000
-a.kulje(1.5)
-print(f'Auton kuljettu matka on {a.kuljettu_matka}')
-'''
