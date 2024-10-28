@@ -67,11 +67,11 @@ while True:
             return print(f'rekisteri numero {self.rek_nro} on saavuttanut vähintään 1000 km/h')
 
 '''
-
 ominaisuudet = ['Rekisteritunnus', ' Huippunopeus', 'Nopeus', 'kuljettu matka']
 table = [auto.auton_ominaisuudet() for auto in autot]
 print('Kilpailun tuokset')
 print(tabulate(table, headers=ominaisuudet, tablefmt = "grid"))
+
 
 '''
 talli = Autotalli()
