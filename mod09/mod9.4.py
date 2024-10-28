@@ -37,15 +37,43 @@ class Auto:
         if self.nopeus < 0:
             self.nopeus = 0
 
-    def kulje(self, aika):
+    def kulje(self, tunti=0):
             # aika tunneissa
-        self.kuljettu_matka += aika * self.nopeus
-        if self.kuljettu_matka >= 10000:
+        self.kuljettu_matka += tunti * self.nopeus
+        while True:
+            for auto in autot:
+                nopeuden_muutos = random.randint(-10, 15)
+                auto.kiihdyta(nopeuden_muutos)
+                auto.kulje(1)
+            if self.kuljettu_matka >= 10000:
+                break
+            tunti += 1
+
+autot = set()
+for i in range(10):
+    rek_nro = f"ABC-{i + 1}"
+    huippunopeus = random.randint(100, 200)
+    uusi_auto = Auto(rek_nro, huippunopeus)
+    autot.add(uusi_auto)
+'''
+tunti = 0 
+while True:
+    for auto in autot:
+        nopeuden_muutos = random.randint(-10, 15)
+        auto.kiihdyta(nopeuden_muutos)
+        auto.kulje(1)
+    if any(kuljettu_matka >= 10000 for auto in autot):
+        
             return print(f'rekisteri numero {self.rek_nro} on saavuttanut vähintään 1000 km/h')
 
+'''
 
-a1 = Auto("ABC-1", 142)
+ominaisuudet = ['Rekisteritunnus', ' Huippunopeus', 'Nopeus', 'kuljettu matka']
+table = [auto.auton_ominaisuudet() for auto in autot]
+print('Kilpailun tuokset')
+print(tabulate(table, headers=ominaisuudet, tablefmt = "grid"))
 
+'''
 talli = Autotalli()
 talli.auto_sisaan(a1)
 
@@ -67,3 +95,4 @@ while kilpailu_kaynnissa:
 a1.kulje(1)
 talli.tulosta_inventaario()
 a1.auton_ominaisuudet()
+'''
