@@ -9,6 +9,10 @@ class Talo:
             print(f'ajetaan hissiä {hissi_numero +1} kerrokseen {kohdekerros}')
             self.hissi_maara[hissi_numero].siirry_kerrokseen(kohdekerros)
 
+    def palohalytys(self):
+        print('palohälytys! Kaikki hissit menevät ekaan kerrokseen!')
+        for hissi in self.hissi_maara:
+            hissi.siirry_kerrokseen(self.alin_ker_num)
 
 class Hissi:
     def __init__(self, alin_kerros, ylin_kerros):
@@ -37,11 +41,6 @@ class Hissi:
                 self.kerros_alas()
         print(f'Hissi on nyt kerroksessa {kohdekerros}')
 
-
-h = Hissi(1,10)
-h.siirry_kerrokseen(5)
-h.siirry_kerrokseen(h.alin_kerros)
-
-talo = Talo(5,5, 3)
-talo.aja_hissi(1,3)
-talo.aja_hissi(1,2)
+talo = Talo(1, 10, 3)
+talo.aja_hissi(0, 5)
+talo.palohalytys()
