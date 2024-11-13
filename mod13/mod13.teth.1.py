@@ -2,9 +2,6 @@ from flask import Flask, Response, render_template
 import json
 import alkulukuteht
 
-
-
-
 app = Flask(__name__)
 
 @app.route('/')
